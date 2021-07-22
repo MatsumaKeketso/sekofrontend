@@ -1,11 +1,8 @@
+import React, {useState} from 'react'
 import Menu from "./menu";
-import Card from "./cardItem";
-import Modal from "react-modal";
-import Pagination from "./pagination";
-const App = (props) => {
-  const clickHandler =  (e) => {
-    console.log(e);
-  }
+import {Pagination} from '@material-ui/lab'
+const App = (props, {onNavClick}) => {
+  const [pageNumber, setPage] = useState(1)
   return (
     <div className="App">
       <Menu></Menu>
@@ -18,9 +15,9 @@ const App = (props) => {
         {props.children}
         
         {/* Pagination */}
-        <Pagination containerStyling={pagination}>
-
-        </Pagination>
+        <div style={pagination}>
+           <Pagination count={10} defaultPage={pageNumber} siblingCount={1} onClick={onNavClick} />
+        </div>
       </div>
     </div>
   );
@@ -28,26 +25,24 @@ const App = (props) => {
 
 // CSS
 const mainDiv = {
-  flex: 1,
-  width: 1,
-  height: "100%",
+  width: '100%',
+  maxHeight: "100%",
   flexShrink: 0,
   justifyContent: "start",
   alignItems: "start",
-  overflow: "visible",
+  overflow: "hidden",
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
 };
 const pagination = {
   boxSizing: "border-box",
   width: "100%",
   flexShrink: 0,
-  height: 90,
+  height: 100,
   display: "flex",
-//   flexDirection: "row",
+  flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  padding: 20,
   overflow: "visible",
 };
 
@@ -55,7 +50,6 @@ const headDiv = {
   boxSizing: "border-box",
   width: "100%",
   flexShrink: 0,
-  height: 83,
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
@@ -64,7 +58,7 @@ const headDiv = {
   overflow: "visible",
 };
 const people = {
-  width: "auto" /* 121px */,
+  width: "100%" /* 121px */,
   height: "auto" /* 43px */,
   flexShrink: 0,
   overflow: "visible",
@@ -74,8 +68,9 @@ const people = {
   letterSpacing: 0,
   lineHeight: 1.2,
   color: "#ffffff",
-  fontSize: 36,
+  fontSize: 20,
   margin: 0,
   padding: 0,
+  textTransform: "uppercase",
 };
 export default App;

@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Card = ({name, gender, birth}) => {
+const Card = ({name, gender, birth, onChildClick}) => {
+  const item = {
+    name: name,
+    gender: gender,
+    birth: birth
+  }
     return (
-        <div style={card}>
+        <div style={card} onClick={() => onChildClick(item)}>
             <div style={nameWrapper}>
                 <p style={title}>{name}</p>
             </div>
