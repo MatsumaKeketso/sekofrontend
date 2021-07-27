@@ -1,62 +1,91 @@
 import React from "react";
-
-const ModalData = (props) => {
+import styles from "./modal.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+const ModalData = ({props, closeModal}) => {
   return (
-    <div style={modalData}>
-      <div style={header}></div>
-      <div style={bio}></div>
-      <div style={stats}></div>
+    <div className={styles.main}>
+      <div className={styles.modal}>
+        <div className={styles.colorOffset}>
+          <div className={styles.closer}>
+            <div className={styles.close} onClick={closeModal}>
+              <FontAwesomeIcon
+                style={{ color: "white", margin: 0 }}
+                icon={faTimes}
+              ></FontAwesomeIcon>
+            </div>
+          </div>
+          <div className={styles.nameWrapper}>
+            <p className={styles.lukeSkywalker}>Luke Skywalker</p>
+            <p className={styles.tatooine}>Planet</p>
+          </div>
+          <div className={styles.bio}>
+            <div className={styles.bioItem}>
+              <p className={styles.height}>height</p>
+              <p className={styles.value}>177</p>
+            </div>
+            <div className={styles.bioItem}>
+              <p className={styles.height}>mass</p>
+              <p className={styles.value}>177</p>
+            </div>
+            <div className={styles.bioItem}>
+              <p className={styles.height}>hair color</p>
+              <p className={styles.value}>177</p>
+            </div>
+            <div className={styles.bioItem}>
+              <p className={styles.height}>skin color</p>
+              <p className={styles.value}>177</p>
+            </div>
+            <div className={styles.bioItem}>
+              <p className={styles.height}>eye color</p>
+              <p className={styles.value}>177</p>
+            </div>
+            <div className={styles.bioItem}>
+              <p className={styles.height}>birth year</p>
+              <p className={styles.value}>177</p>
+            </div>
+            <div className={styles.bioItem}>
+              <p className={styles.height}>gender</p>
+              <p className={styles.value}>177</p>
+            </div>
+          </div>
+          <div className={styles.origin}>
+            <div className={styles.originItem}>
+              <p className={styles.films}>
+                Films{" "}
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                ></FontAwesomeIcon>
+              </p>{" "}
+            </div>
+            <div className={styles.originItem}>
+              <p className={styles.films}>
+              Species{" "}
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                ></FontAwesomeIcon>
+              </p>{" "}
+            </div>
+            <div className={styles.originItem}>
+              <p className={styles.films}>
+              Vehicles{" "}
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                ></FontAwesomeIcon>
+              </p>{" "}
+            </div>
+            <div className={styles.originItem}>
+              <p className={styles.films}>
+              Starships{" "}
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                ></FontAwesomeIcon>
+              </p>{" "}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
-// styling
-const modalData = {
-  boxSizing: "border-box",
-  height: "auto" /* 461px */,
-  width: 709,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-start",
-  alignItems: "center",
-  padding: 10,
-  backgroundColor: "var(--token-7169fcc9-ceaa-45cd-8a23-e903c131f6af, #121212)",
-  overflow: "hidden",
-  borderRadius: 8,
-};
-const header = {
-    boxSizing: "border-box",
-    width: "100%",
-    flexShrink: 0,
-    height: 102,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    padding: 20,
-    backgroundColor: "var(--token-f804f6d4-a2fc-4e16-bcc4-31c3196c40bd, #ffbd2e)",
-    overflow: "visible",
-    borderRadius: 8,
-  }
-  const bio = {
-    boxSizing: "border-box",
-    width: "100%",
-    flexShrink: 0,
-    height: 108,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 10,
-    overflow: "visible",
-  }
-  const stats = {
-    width: "100%",
-    flexShrink: 0,
-    height: 211,
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "flex-start",
-    overflow: "hidden",
-  }
 export default ModalData;

@@ -1,7 +1,170 @@
-.App {
-  background-color: #212426;
-  height: 100vh;
+@import "~bootstrap/scss/bootstrap";
+
+.container {
   width: 100vw;
-  overflow: hidden;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(./assets/image/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+};
+.color-offset {
+  width: 100%;
+  flex: 1;
+  height: 1px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.53) 0%, hsl(0, 0%, 0%) 100%);
+  overflow: visible;
+}
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  height: 367px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  overflow: visible;
+}
+.header-info {
+  flex: 1;
+  width: 1px;
+  flex-shrink: 0;
+  height: 287px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: visible;
+}
+.star-wars-a-p-i {
+  width: auto; /* 107px */
+  height: auto; /* 19px */
+  flex-shrink: 0;
+  overflow: visible;
+  white-space: pre;
+  font-weight: 700;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1.2;
+  color: var(--primary, #ffbd2e);
+}
+.s-w-a-p-i {
+  width: auto; /* 328px */
+  height: auto; /* 106px */
+  flex-shrink: 0;
+  overflow: visible;
+  white-space: pre;
+  color: #ffffff;
+  line-height: 1.2;
+  font-size: 89px;
+  font-weight: 900;
+  font-family: "Inter-Black", "Inter", sans-serif;
+  letter-spacing: 4.7px;
+}
+.text {
+  width: 100%;
+  flex-shrink: 0;
+  height: 162px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
+.logo-wrapper {
+  flex: 1;
+  width: 1px;
+  flex-shrink: 0;
+  height: 139px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+.orig-starwars-logo {
+  flex-shrink: 0;
+  width: 320px;
+  height: 139px;
+  overflow: visible;
+  background-image: url(./assets/image/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  height: 1px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(10, 10, 10) 100%);
+  overflow: visible;
+}
+.content-n-av {
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  height: 76px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  overflow: visible;
+}
+.navWrapper {
+  box-sizing: border-box;
+  width: auto; /* 592px */
+  height: auto; /* 56px */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+.list-wraper {
+  width: 100%;
+  flex: 1;
+  height: 1px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  background-color: rgba(0, 0, 0, 0.363);
+  overflow: visible;
+  padding: 20px;
+}
+.personWrap {
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
 }

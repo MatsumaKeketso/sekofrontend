@@ -25,7 +25,7 @@ const App = (props, {onNavClick}) => {
 
 // CSS
 const mainDiv = {
-  width: '100%',
+  width: 'calc(100% - 240px)',
   maxHeight: "100%",
   flexShrink: 0,
   justifyContent: "start",
